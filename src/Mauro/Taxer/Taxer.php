@@ -14,7 +14,7 @@ class Taxer {
 
 		$rate_object = self::getTaxRateFromSet( $rates->results, $city );
 
-		return (float) round($rate_object->taxSales, 2);
+		return (float) round($rate_object->taxSales, 2) * 100;
 	}
 
 	static function getTaxRateFromSet( $set, $city ) {
